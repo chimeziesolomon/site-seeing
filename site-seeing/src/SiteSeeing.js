@@ -16,7 +16,8 @@ const SiteSeeing = ({ id, image, info, name, price, removeSiteSeeing }) => {
             {readMore ? 'show less' : '  read more'}
           </button>
         </p>
-        <button className="delete-btn" onClick={() => removeSiteSeeing(id)}>
+        <button className="delete-btn"
+         onClick={() => removeSiteSeeing(id)}>
           not interested
         </button>
       </footer>

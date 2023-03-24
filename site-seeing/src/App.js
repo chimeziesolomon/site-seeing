@@ -3,7 +3,7 @@ import Load from './Load'
 import SitesSeeing from './SitesSeeing'
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
-const url = 'https://course-api.com/react-sites-project'
+const url = 'https://course-api.com/react-tours-project'
 
 function App() {
   const [load, setLoad] = useState(true)
@@ -11,7 +11,7 @@ function App() {
 
   const removeSiteSeeing = (id) => {
     const newSitesSeeing = sitesSeeing.filter((siteSeeing) => siteSeeing.id !== id)
-    setSitesSeeing(newSitesSeeing)
+    SitesSeeing(newSitesSeeing)
   }
 
   const fetchSitesSeeing = async () => {
@@ -40,8 +40,9 @@ function App() {
     return (
       <main>
         <div className='title'>
-          <h2>no sites left</h2>
-          <button className='btn' onClick={() => fetchSitesSeeing()}>
+          <h2>no tours left</h2>
+          <button className='btn' 
+          onClick={() => fetchSitesSeeing()}>
             refresh
           </button>
         </div>
@@ -52,8 +53,7 @@ function App() {
     <main>
       <SitesSeeing sitesSeeing={sitesSeeing} removeSiteSeeing={removeSiteSeeing} />
     </main>
-
   )
-  }
+}
 
 export default App

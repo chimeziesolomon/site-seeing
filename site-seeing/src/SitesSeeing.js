@@ -11,7 +11,8 @@ const SitesSeeing = ({ sitesSeeing, removeSiteSeeing }) => {
       </div>
       <div>
         {sitesSeeing.map((siteSeeing) => {
-          return <SiteSeeing key={siteSeeing.id} {...siteSeeing} removeSiteSeeing={removeSiteSeeing} />;
+          return <SiteSeeing key={siteSeeing.id}
+           {...siteSeeing} removeSiteSeeing={removeSiteSeeing} />
         })}
       </div>
     </section>
